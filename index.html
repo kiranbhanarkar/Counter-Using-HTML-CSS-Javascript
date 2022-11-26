@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" ;>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,intial-scale=1.0">
+  <title>counter</title>
+
+  <style>
+
+    *{
+      background-color: black;
+    }
+
+    h1 {
+      color: white;
+      margin-center: 25px;
+    }
+
+    .button {
+      background-color: white;
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .button class {
+      background-color: black;
+      color: white;
+    }
+
+    span {
+      color: white;
+      font-size: 25px;
+    }
+
+
+    p {
+      color: white;
+      font-size: 20px;
+
+    }
+
+    p1 {
+      color: red;
+    }
+  </style>
+</head>
+
+<body style="text-align">
+  
+    <h1 class="text-right">Counter using HTML</right>
+    </h1>
+   
+    <p><u>Your Current Count is :  <span id="counting"></span> </u><br></p>
+    <p1 id="error"></p1>
+    <br>
+    <br>
+    <button class="button" onclick=" increment()">Increment</button>
+    <button class="button" onclick=" decrement()">Decrement</button>
+    <button class="button" onclick="reset()">clear</button>
+
+  <script>
+
+    var data = 0;
+    var error = "Error: Cannot go below 0";
+    var errorReset = "";
+    document.getElementById("counting").innerText = data;
+    function increment() {
+      data = data + 1;
+      document.getElementById("counting").innerText = data;
+    }
+    function decrement() {
+      if(data>0){
+        data = data - 1;
+      document.getElementById("counting").innerText = data;
+      }
+      else{
+        document.getElementById("error").innerText = error;
+      }
+    }
+
+    function reset() {
+      data = 0;
+      document.getElementById("counting").innerText = data;
+      document.getElementById("error").innerText = errorReset;
+    }
+  </script>
+</body>
+
+</html>
